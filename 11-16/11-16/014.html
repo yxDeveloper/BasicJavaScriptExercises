@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			//1，判断是否是闰年
+			//2,求天数,年判断是否是闰年,月是否超过两月
+				//1,把每月的天数组成一个数组,不包含闰年;
+				//2,如果是闰年,而且超过了二月,直接在天数上+1;
+				
+			
+// 			console.log(isRN(4));
+// 			console.log(isRN(8));
+// 			console.log(isRN(100));
+// 			console.log(isRN(200));
+// 			console.log(isRN(400));
+// 			console.log(isRN(800));
+			
+			function isRN(year){
+				if(year%4 === 0 && year%100!==0 || year%400===0){
+					return true;
+					
+				}// else{
+					return false;
+				// }
+				
+			}
+			
+			//求天数
+			console.log(getDays(2018,1,21));
+			
+			function getDays(year,month,day){
+				var arr = [31,28,31,30,31,30,31,31,30,31,30,31];
+				for(var i = 0;i<month-1;i++){		//重点
+					day = day + arr[i];
+					//day += arr[i];
+				}
+				if(month>2 && isRN(year)){
+					day+=1;
+				}
+				return day;
+			}
+		</script>
+	</body>
+</html>

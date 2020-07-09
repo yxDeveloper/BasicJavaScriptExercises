@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var stu1 = new Student("王五");
+			var stu2 = new Student("赵六");
+			
+			console.log(stu1);
+			stu1.sayHi();
+			
+			console.log(stu2);
+			stu2.sayHi();
+			
+			console.log(typeof stu1);
+			console.log(typeof stu2);
+			
+			function Student(name){
+				this.name = name;
+				this.sayHi = function() {
+					console.log(this.name+"说：大家好！")
+				}
+			}
+		</script>
+	</body>
+</html>

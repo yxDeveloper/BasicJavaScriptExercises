@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var arr = ["e","d","c","b","a"];
+			
+			console.log(arr);
+			console.log(arr.reverse());
+			var aaa = arr.reverse();
+			console.log(aaa);
+			console.log(arr);
+			
+			var arr2 = [7,6,15,4,13,2,1];
+			console.log(arr.sort());
+			console.log(arr2);
+			console.log(arr2.sort());
+			console.log(arr2.sort(function (a,b) {
+				return -(a-b);
+			}));
+			
+			
+			alert("2".charCodeAt());
+			
+			console.log(arr2.sort(function (a,b) {
+				a-b;
+				b-a;
+				return a-b;
+			}));
+			function bubble(arr){
+				for(var i = 0;i<arr.length-1;i++){
+					for(var j = 0;j<arr.length-1-i;j++){
+						if(arr[j]-arr[j+i]>0){
+							var temp = arr[j];
+							arr[j] = arr[j+1];
+							arr[j+1] = temp;
+						}
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

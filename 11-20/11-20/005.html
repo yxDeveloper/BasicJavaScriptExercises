@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			//简单数据类型
+			var num = 1;
+			
+			fn1(num);
+			console.log(num);
+			function fn1(aaa){
+				num = num*10;
+				// return aaa = 10;
+			}
+			
+			//复杂数据类型
+			var obj = new Object();
+			obj.name = "张三";
+			fn2(obj);
+			console.log(obj);
+			
+			function fn2(object){
+				object.name = "李四";
+			}
+			
+// 			var a = 1;
+// 			b = a;
+// 			// a = b;
+// 			b = 0;
+// 			alert(a);
+			
+			var obj1 = new Object();
+			obj1.name = "111";
+			obj2 = obj1;
+			obj2.name = "222";
+			alert(obj1.name);
+			
+		</script>
+	</body>
+</html>

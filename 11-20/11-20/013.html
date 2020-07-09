@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			//数组的api遍历
+			var arr = ["关云长","张飞","赵子龙","马超","黄忠"];
+			
+			// arr.every(function (element,index,array) {
+// 				element = "aaa";
+// 				array[index]
+// 				console.log(element);
+// 				console.log(index);
+// 				console.log(array);
+// 				return true;
+// 				if(element>2){
+// 					return false;
+// 				}
+				// return true;
+			// });
+			// alert(bool);
+			
+			
+// 			var arr1 = arr.filter(function (ele,index,array) {
+// 				if(ele.length>2){
+// 					return true;
+// 				}
+// 				return false;
+// 			});
+// 			console.log(arr1);
+
+			
+// 			var str = "";
+// 			arr.forEach(function (ele,index,array) {
+// 				str+=ele;
+// 			})
+// 			console.log(str);
+			
+// 			var arr2 = arr.map(function (ele,index,array) {
+// 				return ele+"你好";
+// 			})
+// 			console.log(arr2);
+
+
+			//some有返回值,
+			var flag = arr.some(function (ele,index,array) {
+				if(ele.length>2){
+					return true;
+				}
+				return false;
+			})
+			alert(flag);
+		</script>
+	</body>
+</html>

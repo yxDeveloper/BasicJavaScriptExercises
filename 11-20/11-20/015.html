@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			
+// 			var arr = ["刘备","张飞","关羽"];
+// 			var str = arr[0];
+// 			var separator = "|";
+// 			for(var i = 1;i<arr.length;i++){
+// 				str+=separator+arr[i];
+// 			}
+// 			console.log(str);
+// 			console.log(arr.join("|"));
+			
+			
+// 			var arr1 = [1,2,3];
+// 			console.log(arr1.reverse());
+// 			
+// 			//第一种
+// 			function reverse1(array){
+// 				var newArr = [];
+// 				for(var i = array.length-1;i>=0;i--){
+// 					newArr[newArr.length] = array[i];
+// 				}
+// 				return newArr;
+// 			}
+// 			// console.log(reverse1(arr1));
+// 			
+// 			//第二种
+// 			function reverse2(array){
+// 				for(var i = 0;i<array.length/2;i++){
+// 					var temp = array[i];
+// 					array[i] = array[array.length-1-i];
+// 					array[array.length-1-1] = temp;
+// 				}
+// 				return array;
+// 			}
+			
+			
+// 			var arr3 = [1500,1200,2000,2100,1800];
+// 			
+// 			var arr4 = arr3.filter(function (ele,index,array) {
+// 				if(ele<2000){
+// 					return true;
+// 				}
+// 				return false;
+// 			})
+// 			console.log(arr4);
+// 			console.log(arr3);
+			
+// 			var arr5 = ["c","a","x","a","x","a"];
+// 			
+// 			var json = {};
+// 			// console.log(json["aflasdfasdf"]);//不存在的属性返回值是undefined;
+// 			for(var i = 0;i<arr5.length;i++){
+// 				// for(var k in json){
+// 					if(json[arr5[i]]){
+// 						json[arr5[i]] += 1;
+// 					}else{
+// 						json[arr5[i]] = 1;
+// 					}
+// 				// }
+// 			}
+// 			console.log(json);
+// 			
+			
+			var arr = [1,2,3,4,5,2,3,4];
+			console.log(arr);
+			console.log(fn(arr));
+			//创建一个新数组,循环遍历,只有新数组中的老数组,就不再添加了
+			function fn(array) {
+				var newArr = [];
+				for(var i = 0;i<array.length;i++){
+					//开闭原则
+					var bool = true;
+					//每次都要判断数组中是否有旧数组中的值
+					for(var j = 0;j<newArr.length;j++){
+						if(array[i] === newArr[j]){
+							bool = false;
+						}
+					}
+					if(bool){
+						newArr[newArr.length] = array[i];
+					}
+				}
+				return newArr;
+			}
+			
+		</script>
+	</body>
+</html>

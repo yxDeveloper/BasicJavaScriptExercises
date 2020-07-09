@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>web site</title>
+		<script type="text/javascript">
+			var n1 =Number(prompt("请输入三位数"));
+			var bai=parseInt(n1/100);
+			var shi=parseInt(n1%100/10);		//需要的是前面的某一位数,所以不能使用Math里面的天花板ceil函数,floor地板函数,round四舍五入也不行,只能使用数据类型转化中的parseInt小数类型转换取整来实现 
+			var ge=n1%10;
+			alert("百位数:"+bai+"十位数:"+shi+"个位数:"+ge);
+			alert(bai+shi+ge);
+			
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

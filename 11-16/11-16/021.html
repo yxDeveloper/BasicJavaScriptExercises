@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			
+			var stu1 = createSudent("张三");
+			var stu2 = createSudent("李四");
+			console.log(stu1);
+			stu1.sayHi();
+			console.log(stu2);
+			stu2.sayHi();
+			
+			function createSudent(name){
+				var student = new Object();
+				student.name = name;
+				student.sayHi = function (){
+					console.log(this.name+"说：大家好！")
+					
+				}
+				return student;
+			}
+			
+		</script>
+	</body>
+</html>

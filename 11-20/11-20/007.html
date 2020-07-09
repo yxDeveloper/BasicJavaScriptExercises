@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var arr1 = [1,2,3];
+			var arr2 = new Array(1,2);
+			
+			var str1 = new String("abc");
+			var str2 = "abc";
+			
+			console.log(arr1 instanceof Array);
+			console.log(Array.isArray(arr2));
+			console.log(Array.isArray(str1));
+			console.log(str1 instanceof String);
+			console.log(str2 instanceof String);
+			
+			var stu = new Stu();
+			function Stu(){
+				
+			}
+			console.log(stu instanceof Stu);
+			
+			console.log(arr1);
+			console.log(arr1.toString());
+			console.log(typeof arr1.toString());
+			console.log(arr1.valueOf());
+			console.log(typeof arr1.valueOf());
+			
+			var arr = ["关羽","张飞","刘备"];
+			var str1 = arr.join();
+			var str2 = arr.join(" ");
+			var str3 = arr.join("");
+			var str4 = arr.join("&");
+			console.log(str1);
+			console.log(str2);
+			console.log(str3);
+			console.log(str4);
+		</script>
+	</body>
+</html>

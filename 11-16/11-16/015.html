@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			(function (){
+				console.log(1)
+			})();
+			
+			document.onclick = function (){
+				alert(1);
+			}
+			
+			setInterval(function () {
+				console.log(444);
+			},1000);
+			
+			setInterval("fn()",1000);
+		</script>
+	</body>
+</html>
